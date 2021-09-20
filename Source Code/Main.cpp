@@ -15,10 +15,10 @@ std::vector<Staff> staff_Info(std::ifstream& File)
 		int trd = text.find(',', snd + 1);
 
 		Staff info;
-		info.user = text.substr(0, fst);
-		info.pass = text.substr(fst + 1, snd - (fst + 1));
-		info.fullname = text.substr(snd + 1, trd - (snd + 1));
-		info.gender = text.substr(trd + 1);
+		info.user = text.substr(0, fst); // get username
+		info.pass = text.substr(fst + 1, snd - (fst + 1)); // get passwd
+		info.fullname = text.substr(snd + 1, trd - (snd + 1)); // get fullname
+		info.gender = text.substr(trd + 1); // get gender
 
 		staff.push_back(info);
 	}
@@ -37,11 +37,11 @@ std::vector<Lecturer> lect_Info(std::ifstream& File)
 		int fth = text.find(',', trd + 1);
 
 		Lecturer info;
-		info.user = text.substr(0, fst);
-		info.pass = text.substr(fst + 1, snd - (fst + 1));
-		info.fullname = text.substr(snd + 1, trd - (snd + 1));
-		info.degree = text.substr(trd + 1, fth - (trd + 1));
-		info.gender = text.substr(fth + 1);
+		info.user = text.substr(0, fst); // get username
+		info.pass = text.substr(fst + 1, snd - (fst + 1)); // get passwd
+		info.fullname = text.substr(snd + 1, trd - (snd + 1)); // get fullname
+		info.degree = text.substr(trd + 1, fth - (trd + 1)); // get degree
+		info.gender = text.substr(fth + 1); // get gender
 
 		Lect.push_back(info);
 	}
@@ -63,11 +63,11 @@ std::vector<Student> student_Info(std::ifstream& File)
 		int fth = text.find(',', trd + 1);
 
 		Student info;
-		info.user = text.substr(0, fst);
-		info.pass = text.substr(fst + 1, snd - (fst + 1));
-		info.fullname = text.substr(snd + 1, trd - (snd + 1));
-		info.DoB = text.substr(trd + 1, fth - (trd + 1));
-		info.Class = text.substr(fth + 1);
+		info.user = text.substr(0, fst); // get username
+		info.pass = text.substr(fst + 1, snd - (fst + 1)); // get passwd
+		info.fullname = text.substr(snd + 1, trd - (snd + 1)); // get fullname
+		info.DoB = text.substr(trd + 1, fth - (trd + 1)); // get date of birth
+		info.Class = text.substr(fth + 1); // get current class
 
 		student.push_back(info);
 	}
